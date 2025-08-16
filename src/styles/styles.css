@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(header.css);
+@import url(home.css);
+@import url(menu.css); 
+@import url(testimonials.css);
+@import url(footer.css);
+
+:root {
+    --color-primar1: #f2fff4; /* Verde quase branco */
+    --color-primar2: #d4f8d9; /* Verde pastel bem claro */
+    --color-primar3: #a8e6b0; /* Verde suave */
+    --color-primar4: #6fd47a; /* Verde médio vibrante */
+    --color-primar5: #4fc35d; /* Verde vivo */
+    --color-primar6: #2d8f3c; /* Verde escuro e forte */
+
+    --color-neutral1: #fff;
+    --color-neutral2: #1d1d1d;
+
+    --color-different1: #1d1d1dad;
+    --color-different2: #434343;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primar1);
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.btn_default,
+.btn_default:active {
+    color: var(--color-neutral2);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primar5);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0px, 0px, 10px, 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn_default:hover {
+    background-color: var(--color-primar3);
+}
+
+.social-media-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral1);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral2);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--color-primar6);
+    font-size: 1.563rem;
+}
+.section-subtitle {
+    font-size: 2.1875rem ;
+}

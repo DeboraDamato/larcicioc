@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Ristorante L'Arcicioc</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-spa" id="nav_logo"> L'Arcicioc</i>
+
+            <ul id="nav_list">
+                <li class="nav_item active">
+                    <a href="#home" onclick="window.scrollTo({ top:0, behavior:'smooth' }); return false;">Home</a>
+                </li>
+            </ul>
+            <ul id="nav_list">
+                <li class="nav_item">
+                    <a href="#menu">Menu</a>
+                </li>
+            </ul>
+            <ul id="nav_list">
+                <li class="nav_item">
+                    <a href="#testimonials">Resensioni</a>
+                </li>
+            </ul>
+            <button class="btn_default">
+                Ordina ora
+            </button>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="#home">Home</a>
+                </li>
+            </ul>
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="#menu">Menu</a>
+                </li>
+            </ul>
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="#recensioni">Resensioni</a>
+                </li>
+            </ul>
+
+            <button class="btn_default">
+                Ordina ora
+            </button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    Il sapore che ti
+                    <span>raggiunge</span>
+                </h1>
+                <p class="description">
+                    Trattoria e caffè - dove ogni dettaglio ha un'anima. 
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn_default">
+                        Vedi Menu
+                    </a>
+                    <a href="tel:+5511999999999" id="phone_button">
+                        <button class="btn_default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                            3397845156
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/images/hero_italy.png" alt="">
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Menu</h2>
+            <h3 class="section-subtitle">I nostri piatti speciali</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                   <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                   </div> 
+                   <img src="/src/images/backup.jpg" class="dish-image" alt="">
+                   <h3 class="dish-title">
+                        Insalata di mare semplice con le verdure
+                   </h3>
+                   <span class="dish-descriptin">
+                        Un mix fresco di gamberi, calamari e seppie, accompagnato da verdure croccanti e condito con olio extravergine e limone. Leggera, profumata e perfetta per ogni stagione.
+                   </span>
+                   <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                   </div>
+                   <div class="dish-price">
+                        <h4>€38,00</h4>
+                            <button class="btn_default">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                   </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                         <i class="fa-solid fa-heart"></i>
+                    </div> 
+                    <img src="/src/images/dish1.jpg" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        Risotto ai Funghi Porcini
+                    </h3>
+                    <span class="dish-descriptin">
+                        Risotto cremoso preparato con funghi porcini, vino bianco e Parmigiano stagionato.  
+                        Un abbraccio caldo in ogni boccone — perfetto per le serate più intime.
+                    </span>
+                    <div class="dish-rate">
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <span>(500+)</span>
+                    </div>
+                    <div class="dish-price">
+                         <h4>€38,00</h4>
+                            <button class="btn_default">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                         <i class="fa-solid fa-heart"></i>
+                    </div> 
+                    <img src="/src/images/dish2.jpeg" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        Gnocchetti con Crema Discampi e Burrata
+                    </h3>
+                    <span class="dish-descriptin">
+                        Gnocchetti freschi serviti con una vellutata crema di scampi e burrata cremosa, per un equilibrio perfetto tra gusto delicato e intensità marina.
+
+                    </span>
+                    <div class="dish-rate">
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <span>(500+)</span>
+                    </div>
+                    <div class="dish-price">
+                         <h4>€38,00</h4>
+                            <button class="btn_default">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                         <i class="fa-solid fa-heart"></i>
+                    </div> 
+                    <img src="/src/images/dish3.jpeg" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        Grigliata di pesce
+                    </h3>
+                    <span class="dish-descriptin">
+                        Un secondo piatto leggero e saporito, preparato con orata, salmone, tonno, calamari e gamberi marinati in olio extravergine, vino bianco ed erbe aromatiche. Grigliati alla perfezione, sprigionano profumi estivi e gusto autentico del mare. 
+                    </span>
+                    <div class="dish-rate">
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <span>(500+)</span>
+                    </div>
+                    <div class="dish-price">
+                         <h4>€38,00</h4>
+                            <button class="btn_default">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <img src="/src/images/chef_redimensionada.png" id="testimonials_chef" alt="">
+
+            <div id="testimonials_content">
+                <h2 class="section-title">Recensioni</h2>
+                <h3 class="section-subtitle">Cosa dicono i nostri clienti</h3>
+            
+                <div id="feedbacks">
+                    <div class="feedback">
+                        <img src="/src/images/avatar2.jpeg" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Mario Rossi
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Atmosfera accogliente e cucina piemontese autentica! La bagna cauda era deliziosa, preparata “come Dio comanda” 
+                                con ingredienti locali. Servizio cordiale e prezzo onesto. Tornerò sicuramente!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="/src/images/avatar.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Laura Picolli
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Piccolo gioiello nel cuore di Montafia. L’antipasto di lingua in salsa rosa e il bunet come dolce erano 
+                                semplicemente perfetti. Ottimo rapporto qualità-prezzo e ambiente familiare.."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <!-- Pooso colocar um link para mandar para as avaliações do google -->
+                <a class="btn_default"  href="https://share.google/G5jdS41HVKOmoXhmp">
+                    Vedi tutte le recensioni su Google
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="/src/images/wave.svg" alt="">
+            <div id="footer-items">
+                <span id="copyright">
+                    &copy; 2025 L'Arcicioc. Tutti i diritti riservati.
+                </span>
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+    </footer>
+
+    <script src="src/javascript/scripts.js"></script>
+</body>
+</html>
