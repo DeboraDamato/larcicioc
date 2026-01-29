@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="src/javascript/admin.js"></script>
+    <title>Amministrazione - L'Arcicioc</title>
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <i class="fa-solid fa-spa"></i>
+                <h1>L'Arcicioc</h1>
+                <h2>Amministrazione</h2>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn_default">Accedi</button>
+                <div id="loginError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Principal -->
+    <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <header class="admin-header">
+            <div class="admin-nav">
+                <div class="admin-logo">
+                    <i class="fa-solid fa-spa"></i>
+                    <span>L'Arcicioc Admin</span>
+                </div>
+                <div class="admin-actions">
+                    <span id="welcomeMessage">Benvenuto, Admin</span>
+                    <button id="logoutBtn" class="btn-logout">
+                        <i class="fa-solid fa-sign-out-alt"></i>
+                        Esci
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <!-- Estatísticas -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalReservations">0</h3>
+                            <p>Prenotazioni Totali</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="pendingReservations">0</h3>
+                            <p>In Attesa</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="confirmedReservations">0</h3>
+                            <p>Confermate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="todayGuests">0</h3>
+                            <p>Ospiti Oggi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filtros e Busca -->
+            <section class="filters-section">
+                <div class="filters-container">
+                    <div class="search-group">
+                        <input type="text" id="searchReservations" placeholder="Cerca per nome, telefono o email...">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                    <div class="filter-group">
+                        <select id="statusFilter">
+                            <option value="">Tutti gli Stati</option>
+                            <option value="pendente">In Attesa</option>
+                            <option value="confermata">Confermata</option>
+                            <option value="completata">Completata</option>
+                            <option value="cancellata">Cancellata</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <input type="date" id="dateFilter">
+                    </div>
+                    <div class="filter-group">
+                        <button id="clearFilters" class="btn-secondary">
+                            <i class="fa-solid fa-filter-circle-xmark"></i>
+                            Pulisci Filtri
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lista de Reservas -->
+            <section class="reservations-section">
+                <div class="section-header">
+                    <h2>Prenotazioni</h2>
+                    <div class="export-actions">
+                        <button id="exportBtn" class="btn-secondary">
+                            <i class="fa-solid fa-download"></i>
+                            Esporta CSV
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="reservations-container">
+                    <div id="reservationsList" class="reservations-list">
+                        <!-- As reservas serão carregadas aqui dinamicamente -->
+                         
+                    </div>
+                    <div id="noReservations" class="no-reservations" style="display: none;">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                        <h3>Nessuna prenotazione trovata</h3>
+                        <p>Non ci sono prenotazioni che corrispondono ai criteri di ricerca.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para Detalhes da Reserva -->
+    <div id="reservationModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Dettagli Prenotazione</h3>
+                <button class="modal-close">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Conteúdo será carregado dinamicamente -->
+            </div>
+            <div class="modal-footer">
+                <button id="modalConfirm" class="btn_default">Conferma</button>
+                <button id="modalComplete" class="btn-success">Completa</button>
+                <button id="modalCancel" class="btn-danger">Cancella</button>
+                <button id="modalClose" class="btn-secondary">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

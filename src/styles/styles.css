@@ -3,6 +3,8 @@
 @import url(home.css);
 @import url(menu.css); 
 @import url(testimonials.css);
+@import url(reservas.css);
+@import url(admin.css);
 @import url(footer.css);
 
 :root {
